@@ -30,8 +30,10 @@ public abstract class Weapons : MonoBehaviour
     [SerializeField] protected List<GameObject>  bulletPool;
 
     [SerializeField] protected AudioClip bulSound;
-    protected virtual void Reload()
+    public virtual void Reload()
     {
+        if (curBullets == maxBullets)
+            return;
         StartCoroutine(RelodBullets());
     }
 
@@ -49,8 +51,10 @@ public abstract class Weapons : MonoBehaviour
         IsReloading = false;
     }
 
-    protected virtual void Fire()
+    public virtual void Fire()
     {
+        if (curBullets <= 0 || Time.time < firerate + lastShot)
+            return;
 
         if (TryGetBul(out GameObject bullet))
             SetBulSettings(ref bullet);

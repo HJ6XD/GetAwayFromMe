@@ -17,11 +17,6 @@ public class Shotgun : Weapons
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && curBullets != 0 && Time.time > firerate + lastShot)
-            Fire();
-
-        if (Input.GetKeyDown(KeyCode.R) && curBullets != maxBullets)
-            Reload();
 
         if (IsReloading && Time.time > lastReload + reloadTime)
         {
@@ -34,14 +29,20 @@ public class Shotgun : Weapons
         }
     }
 
-    protected override void Reload()
+    public override void Reload()
     {
+        if (curBullets == maxBullets)
+            return;
+
         IsReloading = true;
         lastReload = Time.time;
     }
 
-    protected override void Fire()
+    public override void Fire()
     {
+        if (curBullets <= 0 || Time.time < firerate + lastShot)
+            return;
+
         int bul2Sut = 5;
         int cdir = -20;
         newCustomDir = muzle.rotation;

@@ -11,12 +11,4 @@ public class AsaultRifle :  Weapons
             bulletClone.SetActive(false);
         }
     }
-    void Update()
-    {
-        if (Input.GetMouseButton(0) && curBullets != 0 && Time.time > firerate + lastShot)
-            Fire();
-
-        if(Input.GetKeyDown(KeyCode.R) && curBullets != maxBullets)
-            Reload();
-    }
 }

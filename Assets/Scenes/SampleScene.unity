@@ -1860,6 +1860,8 @@ GameObject:
   - component: {fileID: 304969865}
   - component: {fileID: 304969867}
   - component: {fileID: 304969868}
+  - component: {fileID: 304969869}
+  - component: {fileID: 304969870}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1938,6 +1940,36 @@ MonoBehaviour:
   ar: {fileID: 280475573}
   sg: {fileID: 738246812}
   uz: {fileID: 1759354456}
+--- !u!114 &304969869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304969864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17a8dd6212786479346aae7d9bc031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pwc: {fileID: 304969868}
+  weapon: {fileID: 0}
+--- !u!114 &304969870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304969864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3c77b2d2744724fb85da55f6ae324b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 90
+  myCam: {fileID: 330585545}
+  playerModel: {fileID: 172932218}
+  RayDefaultDistance: 100
 --- !u!4 &325066068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5697452588453319127, guid: a8e680f051c6aee41b2160a410385b6f, type: 3}

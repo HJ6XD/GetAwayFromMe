@@ -11,7 +11,7 @@ public class PlayerWeaponChange : MonoBehaviour
 
     private void Start()
     {
-        activeWeapon = WeaponType.AsaultRifle;
+        activeWeapon = WeaponType.Uzi;
         ChangeWeapons(activeWeapon);
     }
 
@@ -54,5 +54,17 @@ public class PlayerWeaponChange : MonoBehaviour
                 WeaponsUIManager.wuiInstance.ChangeToUZ();
                 break;
         }
+    }
+
+    public GameObject ProvideCurWeapon()
+    {
+        if (ar.activeInHierarchy)
+            return ar;
+        else if (sg.activeInHierarchy)
+            return sg;
+        else if (uz.activeInHierarchy)
+            return uz;
+        else
+            return null;        
     }
 }

@@ -20,16 +20,20 @@ public class PlayerScript : MonoBehaviour
     {
         if (!isDead)
         {
-            //Movimiento del jugador
-            if (Input.GetKey(KeyCode.W))
-                transform.position = new Vector3(transform.position.x, 1, transform.position.z + (speed * Time.deltaTime));
-            if (Input.GetKey(KeyCode.S))
-                transform.position = new Vector3(transform.position.x, 1, transform.position.z - (speed * Time.deltaTime));
-            if (Input.GetKey(KeyCode.D))
-                transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime), 1, transform.position.z);
-            if (Input.GetKey(KeyCode.A))
-                transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), 1, transform.position.z);
+            PlayerWalk();
         }
+    }
+
+    public void PlayerWalk()
+    {
+        if (Input.GetKey(KeyCode.W))
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z + (speed * Time.deltaTime));
+        if (Input.GetKey(KeyCode.S))
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z - (speed * Time.deltaTime));
+        if (Input.GetKey(KeyCode.D))
+            transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime), 1, transform.position.z);
+        if (Input.GetKey(KeyCode.A))
+            transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), 1, transform.position.z);
     }
     public void RecibeDamage(int _damage)
     {

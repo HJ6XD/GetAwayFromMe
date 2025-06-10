@@ -14,17 +14,11 @@ public class Uzi : Weapons
         }
     }
 
-    void Update()
+    public override void Fire()
     {
-        if (Input.GetMouseButton(0) && curBullets != 0 && Time.time > firerate + lastShot)
-            Fire();
+        if (curBullets <= 0 || Time.time < firerate + lastShot)
+            return;
 
-        if (Input.GetKeyDown(KeyCode.R) && curBullets != maxBullets)
-            Reload();
-    }
-
-    protected override void Fire()
-    {
         float spread = Random.Range(-10,10);
         newCustomDir = muzle.rotation;
 
