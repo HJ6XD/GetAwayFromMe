@@ -1,7 +1,7 @@
 using UnityEngine;
 public class FireCommand : WeaponCommand
 {
-    public FireCommand(Weapons _weapon) : base(_weapon) { }
+    public FireCommand(IWeapons _weapon) : base(_weapon) { }
 
     public override void Execute()
     {
@@ -11,7 +11,7 @@ public class FireCommand : WeaponCommand
 }
 public class ReloadCommand : WeaponCommand
 {
-    public ReloadCommand(Weapons _weapon) : base(_weapon) { }
+    public ReloadCommand(IWeapons _weapon) : base(_weapon) { }
 
     public override void Execute()
     {

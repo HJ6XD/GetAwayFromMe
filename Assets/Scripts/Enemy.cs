@@ -13,8 +13,6 @@ public class Enemy : MonoBehaviour, IEnemies
     [SerializeField] int damage;
     [SerializeField] float speed;
     [SerializeField] public EnemyType enemyType;
-    Vector3 direction;
-
     [SerializeField] Transform player;
     NavMeshAgent agent;
 

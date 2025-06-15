@@ -10,7 +10,7 @@ public enum WeaponType
     Shotgun,
     Uzi
 }
-public abstract class Weapons : MonoBehaviour
+public abstract class Weapons : MonoBehaviour, IWeapons
 {
     [SerializeField] protected float firerate;
     protected float lastShot;

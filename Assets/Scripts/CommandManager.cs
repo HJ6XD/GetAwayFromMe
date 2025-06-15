@@ -4,15 +4,15 @@ public class CommandManager : MonoBehaviour
 {
     [SerializeField] PlayerWeaponChange pwc;
 
-    public Weapons weapon;
-    public Stack<ICommand> commands = new();
+    public IWeapons weapon;
+    [SerializeField] public Stack<ICommand> commands = new();
 
     readonly CommandInvoker commandInvoker = new();
 
     private void Start()
     {
         GameObject wobj = pwc.ProvideCurWeapon();
-        weapon = wobj.GetComponent<Weapons>();
+        weapon = wobj.GetComponent<IWeapons>();
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class CommandManager : MonoBehaviour
     void GetCurWeapon()
     {
         GameObject wobj = pwc.ProvideCurWeapon();
-        weapon = wobj.GetComponent<Weapons>();
+        weapon = wobj.GetComponent<IWeapons>();
     }
 
     void ExecuteCommands(ICommand command)

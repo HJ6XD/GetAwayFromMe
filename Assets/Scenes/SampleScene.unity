@@ -1862,6 +1862,7 @@ GameObject:
   - component: {fileID: 304969868}
   - component: {fileID: 304969869}
   - component: {fileID: 304969870}
+  - component: {fileID: 304969871}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1953,7 +1954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pwc: {fileID: 304969868}
-  weapon: {fileID: 0}
 --- !u!114 &304969870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,6 +1970,33 @@ MonoBehaviour:
   myCam: {fileID: 330585545}
   playerModel: {fileID: 172932218}
   RayDefaultDistance: 100
+--- !u!54 &304969871
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304969864}
+  serializedVersion: 4
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!4 &325066068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5697452588453319127, guid: a8e680f051c6aee41b2160a410385b6f, type: 3}
@@ -12401,9 +12428,9 @@ SceneRoots:
   - {fileID: 751381921}
   - {fileID: 1215011249}
   - {fileID: 1201416309}
+  - {fileID: 1457151886}
   - {fileID: 1019458402}
   - {fileID: 1376408524}
-  - {fileID: 1457151886}
   - {fileID: 1469173713}
   - {fileID: 900774913}
   - {fileID: 926302428}

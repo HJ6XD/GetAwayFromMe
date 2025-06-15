@@ -7,16 +7,16 @@ public interface ICommand
 
 public abstract class WeaponCommand : ICommand
 {
-    protected readonly Weapons curWeapon;
+    protected readonly IWeapons curWeapon;
 
-    protected WeaponCommand( Weapons _weapon)
+    protected WeaponCommand( IWeapons _weapon)
     {
         this.curWeapon = _weapon;
     }
 
     public abstract void Execute();
 
-    public static T Create<T>(Weapons _weapon) where T : WeaponCommand {
+    public static T Create<T>(IWeapons _weapon) where T : WeaponCommand {
         return (T) System.Activator.CreateInstance(typeof(T), _weapon);
     }
 }
