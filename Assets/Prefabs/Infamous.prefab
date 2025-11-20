@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aaf45c4eb4bfd4ba36413a2acef5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxlife: 80
+  maxlife: 120
   damage: 12
-  speed: 6
+  speed: 5
   enemyType: 1
   player: {fileID: 0}
   dmg: {fileID: 8300000, guid: 935e827ce37e5264687b022febc16ac6, type: 3}
