@@ -64,6 +64,7 @@ public class EnemySpawner : MonoBehaviour
         if(waitForNew <= 0 && (maxNumItemss == 0 || maxNumItemss > itemsSpawned))
         {
             Lanza();
+            Debug.Log("Spawn");
             if(increaseSpawn >=0 && timeBetwenSpawns > minSpawnTime)
                 timeBetwenSpawns -= increaseSpawn;
             waitForNew = timeBetwenSpawns;
