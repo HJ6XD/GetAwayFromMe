@@ -22,4 +22,5 @@ public class ControladordeAudiio : MonoBehaviour
     {
         sounfEefect.PlayOneShot(musica);
     }
+
 }

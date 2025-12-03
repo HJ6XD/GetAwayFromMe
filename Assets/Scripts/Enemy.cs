@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour, IEnemies
         if (life <= 0) { 
             gameObject.SetActive(false);
             ScoreManager.scoreInstance.GainPoints(maxlife);
+            MusicManager.instance.UpdateTotalEnemyQuantity(-1);
         }
     }
 

@@ -81,7 +81,9 @@ public class EnemySpawner : MonoBehaviour
     void Lanza()
     {
         Vector2 randomPos = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        if(TryGetEnemy(out GameObject enemy))
+        MusicManager.instance.UpdateTotalEnemyQuantity(1);
+
+        if (TryGetEnemy(out GameObject enemy))
         {
             Enemy eComp = enemy.GetComponent<Enemy>();
             eComp.SetPosition(randomPos);
