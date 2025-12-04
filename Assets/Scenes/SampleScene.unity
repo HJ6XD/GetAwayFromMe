@@ -663,6 +663,10 @@ PrefabInstance:
       value: Infamous
       objectReference: {fileID: 0}
     - target: {fileID: 3244162426430139511, guid: f021ae5e30a7c5447a81f120030b8202, type: 3}
+      propertyPath: dmg
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b5f9b8ec85242a4a8c3ea7b048e3bd7, type: 3}
+    - target: {fileID: 3244162426430139511, guid: f021ae5e30a7c5447a81f120030b8202, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 304969866}
@@ -3652,6 +3656,10 @@ PrefabInstance:
       value: Mutant
       objectReference: {fileID: 0}
     - target: {fileID: 7185058570977426943, guid: d6b9569566df593429db0eca4cc255c0, type: 3}
+      propertyPath: dmg
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b5f9b8ec85242a4a8c3ea7b048e3bd7, type: 3}
+    - target: {fileID: 7185058570977426943, guid: d6b9569566df593429db0eca4cc255c0, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 304969866}
@@ -3868,16 +3876,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 572114724}
-  parte1: {fileID: 8300000, guid: be3b3b64ecf10f6429f6aa1eee5d4984, type: 3}
-  parte2: {fileID: 8300000, guid: 6132e35ca0e265742adfd61510ccb39b, type: 3}
-  parte3: {fileID: 8300000, guid: 1af72dbfbc3cd674db51f0d8fcfd526d, type: 3}
-  transicion1a2: {fileID: 8300000, guid: e76c331bb768b514b8feb74e9b65d825, type: 3}
-  transicion2a3: {fileID: 8300000, guid: 1879e7c884d5a2c4fae31742b693320b, type: 3}
+  parte1: {fileID: 8300000, guid: d0f4b0fa05f812d4ab52762e9e2fa022, type: 3}
+  parte2: {fileID: 8300000, guid: 39f2bfbc1cc83b24997212c694b13e6f, type: 3}
+  parte3: {fileID: 8300000, guid: 0ab194007464ee14cba131d0bf9ac9a1, type: 3}
+  transicion1a2: {fileID: 8300000, guid: 9f70cb736be34734ea89197f3058b74a, type: 3}
+  transicion2a3: {fileID: 8300000, guid: 69e87896e2170854e8ce0c97ec29650b, type: 3}
   totalEnemyQuant: 3
-  qToChangeTo2: 10
+  qToChangeTo2: 8
   qToChangeTo3: 20
-  expectedTimeTochange2: 5
-  expectedTimeTochange3: 5
+  expectedTimeTochange2: 28
+  expectedTimeTochange3: 21
   playing2: 0
   playing3: 0
 --- !u!4 &572114726
@@ -10276,7 +10284,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11666,7 +11674,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
